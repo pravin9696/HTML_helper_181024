@@ -1,0 +1,24 @@
+﻿@model HTML_helper_181024.Models.stud
+@{
+    ViewBag.Title = "dropdowndemo";
+}
+
+<h2>dropdowndemo</h2>
+
+@using (Html.BeginForm())
+{
+    @*@Html.DropDownListFor(x=>x.course,new SelectList(ViewBag.courseList),"--select Course--")*@
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    @*@Html.ListBoxFor(x => x.name, new SelectList(ViewBag.courseList))
+    <br />
+    <br />
+    @Html.DropDownListFor(x => x.courseID, new SelectList(ViewBag.tblcourselist, "id", "course_name"), "***select course please***")*@
+    <br />
+    <br />
+    @Html.ListBoxFor(x => x.courseID, new SelectList(ViewBag.tblcourselist, "id", "course_name"))
+    <input type="submit" value="submit" />
+}

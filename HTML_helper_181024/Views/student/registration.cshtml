@@ -1,0 +1,17 @@
+﻿@model HTML_helper_181024.Models.stud
+@{
+    ViewBag.Title = "registration";
+}
+
+<h2>registration</h2>
+
+@using (Html.BeginForm())
+{
+	foreach (var item in (List<HTML_helper_181024.Models.tblCourse>)ViewBag.tblCourseList)
+	{
+		@Html.RadioButtonFor(x=>x.courseID,item.id)@Html.Label(item.course_name)<br />
+
+	}
+	<input type="submit"value="submit" />
+}
+

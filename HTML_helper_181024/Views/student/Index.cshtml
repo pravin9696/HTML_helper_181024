@@ -1,0 +1,18 @@
+﻿@model HTML_helper_181024.Models.stud
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>select Course</h2>
+@using (Html.BeginForm("index","student",FormMethod.Post))
+{
+	foreach (var item in (List<string>) ViewBag.courseList)
+	{
+		@Html.RadioButtonFor(Model=>Model.course,item)
+		
+		@Html.Label(item)<br />
+
+	}
+	<input type="submit"value="Submit" />
+}
+

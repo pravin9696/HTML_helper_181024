@@ -1,0 +1,27 @@
+﻿@model HTML_helper_181024.Models.tblStudent
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>insertStudent</title>
+</head>
+<body>
+    <div>
+        <h1>student Registration form</h1>
+        @using (Html.BeginForm())
+        {
+            @Html.DisplayNameFor(x => x.Id)@Html.TextBoxFor(x => x.Id)<br />
+            @Html.DisplayNameFor(x => x.name)@Html.TextBoxFor(x => x.name)<br />
+            @Html.Display("Select Course")@Html.DropDownListFor(x => x.course, new SelectList(ViewBag.langList, "Language", "Language"))<br />
+            @Html.Display("Select Course id")@Html.ListBoxFor(x => x.course_id, new SelectList(ViewBag.langList, "Id", "Language"))<br />
+            <input type="submit" value="submit" />
+        }
+    </div>
+</body>
+</html>
